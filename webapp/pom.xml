@@ -12,8 +12,9 @@
 	<artifactId>webapp</artifactId>
 	<packaging>war</packaging>
 	<name>webapp</name>
-	
+
 	<dependencies>
+
 		<!-- JSF2 -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -59,6 +60,34 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<addGroupIdToProjectName>true</addGroupIdToProjectName>
+						<additionalProjectFacets>
+							<jst.jsf>2.1</jst.jsf>
+							<jst.web>3.0</jst.web>
+							<wst.jsdt.web>1.0</wst.jsdt.web>
+						</additionalProjectFacets>
+						<additionalProjectnatures>
+							<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+							<projectnatures>org.eclipse.wst.common.modulecore.ModuleCoreNature</projectnatures>
+							<projectnatures>org.eclipse.wst.common.project.facet.core.nature</projectnatures>
+							<projectnatures>org.eclipse.wst.jsdt.core.jsNature</projectnatures>
+						</additionalProjectnatures>
+						<downloadJavadocs>true</downloadJavadocs>
+						<downloadSources>true</downloadSources>
+						<jeeversion>6.0</jeeversion>
+						<wtpversion>2.0</wtpversion>
+						<wtpmanifest>true</wtpmanifest>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 </project>
