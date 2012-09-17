@@ -1,7 +1,7 @@
 /**
  * 
  */
-package strategyGame.controller;
+package strategyGame.viewbeans;
 
 import java.io.Serializable;
 

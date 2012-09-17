@@ -1,7 +1,7 @@
 /**
  * 
  */
-package strategyGame.viewbeans;
+package strategyGame.controller;
 
 import java.io.Serializable;
 
@@ -10,7 +10,8 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
-import strategyGame.controller.ShowUserViewBean;
+import strategyGame.viewbeans.ShowUserViewBean;
+
 
 /**
  * Controller for the showProfile Page.
