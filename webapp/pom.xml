@@ -15,6 +15,12 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>strategy-game</groupId>
+			<artifactId>services</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+
 		<!-- JSF2 -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>

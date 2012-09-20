@@ -9,6 +9,8 @@
 
 	<modules>
 		<module>../webapp</module>
+		<module>../services</module>
+		<module>../domain</module>
 	</modules>
 
 	<properties>
