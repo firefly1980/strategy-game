@@ -1,0 +1,45 @@
+﻿DROP TABLE IF EXISTS units;
+DROP TABLE IF EXISTS matches_users;
+DROP TABLE IF EXISTS matches;
+DROP TABLE IF EXISTS users;
+DROP SEQUENCE IF EXISTS units_unit_id_seq;
+DROP SEQUENCE IF EXISTS matches_match_id_seq;
+DROP SEQUENCE IF EXISTS users_user_id_seq;
+
+CREATE SEQUENCE users_user_id_seq;
+CREATE TABLE users ( 
+	user_id INTEGER NOT NULL DEFAULT nextval('users_user_id_seq'), 
+	login_name VARCHAR NOT NULL,
+	password VARCHAR NOT NULL,
+	display_name VARCHAR NOT NULL,
+	email_adress VARCHAR NOT NULL,
+	PRIMARY KEY(user_id)
+);
+
+CREATE SEQUENCE matches_match_id_seq;
+CREATE TABLE matches (
+	match_id INTEGER NOT NULL DEFAULT nextval('matches_match_id_seq'),
+	last_move_date TIMESTAMP NOT NULL,
+	PRIMARY KEY(match_id)
+);
+
+CREATE TABLE matches_users ( 
+	match_id INTEGER NOT NULL, 
+	user_id INTEGER NOT NULL,
+	PRIMARY KEY (match_id, user_id),
+	FOREIGN KEY (match_id) REFERENCES matches(match_id),
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE SEQUENCE units_unit_id_seq;
+CREATE TABLE units ( 
+	unit_id INTEGER NOT NULL DEFAULT nextval('units_unit_id_seq'),
+	match_id INTEGER NOT NULL,
+	user_id INTEGER NOT NULL,
+	coordinate_x INTEGER NOT NULL,
+	coordinate_y INTEGER NOT NULL,
+	flight_unit BOOLEAN NOT NULL,
+	PRIMARY Key(unit_id),
+	FOREIGN KEY (match_id) REFERENCES matches(match_id),
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
