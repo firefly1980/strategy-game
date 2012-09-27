@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>1.6</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.0.7.RELEASE</spring.version>
 	</properties>
 
 	<dependencyManagement>
@@ -54,14 +55,38 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-validator</artifactId>
-				<version>4.2.0.Final</version>
+				<version>4.3.0.Final</version>
 			</dependency>
 
 			<!-- Spring -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-				<version>3.1.2.RELEASE</version>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- JPA -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>4.1.6.Final</version>
+			</dependency>
+
+			<!-- Postgres Driver -->
+			<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>9.1-901-1.jdbc4</version>
 			</dependency>
 
 			<!-- Testing -->
@@ -70,6 +95,22 @@
 				<artifactId>junit</artifactId>
 				<version>4.10</version>
 				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
