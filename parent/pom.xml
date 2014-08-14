@@ -93,8 +93,7 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.10</version>
-				<scope>test</scope>
+				<version>4.11</version>
 			</dependency>
 
 			<dependency>
@@ -118,6 +117,7 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+			
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -130,6 +130,7 @@
 						<showWarnings>true</showWarnings>
 					</configuration>
 				</plugin>
+				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
@@ -148,6 +149,7 @@
 						<jeeversion>6.0</jeeversion>
 					</configuration>
 				</plugin>
+				
 			</plugins>
 
 		</pluginManagement>

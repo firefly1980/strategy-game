@@ -12,33 +12,6 @@
 	<artifactId>domain</artifactId>
 	<name>domain</name>
 
-	<build>
-		<finalName>services</finalName>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>2.9</version>
-					<configuration>
-						<addGroupIdToProjectName>true</addGroupIdToProjectName>
-						<additionalProjectFacets>
-							<jpt.jpa>2.0</jpt.jpa>
-							<java>1.6</java>
-						</additionalProjectFacets>
-						<additionalProjectnatures>
-							<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-							<projectnature>org.eclipse.wst.common.project.facet.core.nature</projectnature>
-						</additionalProjectnatures>
-						<downloadJavadocs>true</downloadJavadocs>
-						<downloadSources>true</downloadSources>
-						<jeeversion>6.0</jeeversion>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>postgresql</groupId>
@@ -56,5 +29,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 		</dependency>
+
 	</dependencies>
 </project>
