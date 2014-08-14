@@ -19,44 +19,4 @@
 			<version>${parent.version}</version>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<finalName>services</finalName>
-		<pluginManagement>
-			<plugins>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>2.9</version>
-					<configuration>
-						<addGroupIdToProjectName>true</addGroupIdToProjectName>
-						<additionalProjectFacets>
-							<java>1.6</java>
-						</additionalProjectFacets>
-						<additionalProjectnatures>
-							<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-							<projectnatures>org.eclipse.wst.common.project.facet.core.nature</projectnatures>
-						</additionalProjectnatures>
-						<downloadJavadocs>true</downloadJavadocs>
-						<downloadSources>true</downloadSources>
-						<jeeversion>6.0</jeeversion>
-					</configuration>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>2.4</version>
-					<configuration>
-						<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
-						<source>1.6</source>
-						<target>1.6</target>
-					</configuration>
-				</plugin>
-			</plugins>
-
-		</pluginManagement>
-	</build>
-
 </project>
